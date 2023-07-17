@@ -40,10 +40,10 @@ if (isset($_SESSION['user'])){
                             <div id="loginAlert"></div>
                             <div class="col-12 text-center mb-4">
                                 <a class="btn btn btn-outline-secondary btn-block" href="#">
-                                        <span class="d-flex justify-content-center align-items-center">
-                                            <img class="avatar xs me-2" src="assets/dist/assets/images/google.svg" alt="Image Description">
-                                            Sign in with Google
-                                        </span>
+                                    <span class="d-flex justify-content-center align-items-center">
+                                        <img class="avatar xs me-2" src="assets/dist/assets/images/google.svg" alt="Image Description">
+                                        Sign in with Google
+                                    </span>
                                 </a>
                                 <span class="dividers text-muted mt-4">OR</span>
                             </div>
@@ -58,7 +58,7 @@ if (isset($_SESSION['user'])){
                                     <div class="form-label">
                                             <span class="d-flex justify-content-between align-items-center">
                                                 Password
-                                                <a class="text-primary" href="#">Forgot Password?</a>
+                                                <a class="text-primary" href="assets/php/reset-password.php">Forgot Password?</a>
                                             </span>
                                     </div>
                                     <input type="password" name="password" value="<?php if (isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="form-control form-control" >
