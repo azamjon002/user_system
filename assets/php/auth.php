@@ -82,4 +82,21 @@ class Auth extends Database{
         return true;
     }
 
+    public function add_new_note($uid, $title, $note)
+    {
+        $stmt = $this->conn->prepare("INSERT INTO notes (uid, title, note) VALUES (:uid, :title, :note)");
+        $stmt->execute(['uid'=>$uid, 'title'=>$title, 'note'=>$note]);
+
+        return true;
+    }
+
+    public function getNotes($uid)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM notes WHERE uid = :uid");
+        $stmt->execute(['uid'=>$uid]);
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
 }
